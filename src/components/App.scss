@@ -1,0 +1,21 @@
+button {
+	background-color: white;
+	border: none;
+	font-size: 16px;
+}
+
+.inc {
+	color: green;
+}
+
+button:hover {
+	background-color: lightgrey;
+}
+
+.dec {
+	color: red;
+}
+
+.reset {
+	color: rgb(207, 31, 149)
+}
