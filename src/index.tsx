@@ -6,11 +6,8 @@ import { LazyShop } from "@/pages/shop/Shop.lazy";
 import { Suspense } from "react";
 
 const root = document.getElementById("root");
-
 if (!root) { throw new Error("no root") }
-
 const container = createRoot(root)
-
 const router = createBrowserRouter([
 	{
 		path: '',

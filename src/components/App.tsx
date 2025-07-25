@@ -12,6 +12,7 @@ export const App = () => {
 	const reset = () => setCount(0)
 	return (
 		<div>
+
 			<h1>PLATFORM={__PLATFORM__}</h1>
 			<img width={150} height={150} src={jsPng} alt="" />
 			<img width={380} height={200} src={myPhoto} alt="" />

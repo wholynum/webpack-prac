@@ -24,5 +24,5 @@ export default (env: EnvVars) => {
 		analyzer: env.analyzer,
 		platform: env.platform ?? 'desktop'
 	});
-	return config
+	return config;
 }
