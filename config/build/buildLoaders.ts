@@ -2,6 +2,7 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { ModuleOptions } from "webpack";
 import { BuildOptions } from "./types/types";
 import ReactRefreshTypeScript from 'react-refresh-typescript'
+import {buildBabelLoader} from "./babel/buildBabelLoader";
 
 export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
 	const isDev = options.mode === "development";
@@ -73,5 +74,7 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
 		exclude: /node_modules/,
 	}
 
-	return [assetLoader, scssLoader, tsLoader, svgr]
+	const babelLoader = buildBabelLoader(isDev)
+
+	return [assetLoader, scssLoader, /*tsLoader,*/ babelLoader, svgr]
 }
